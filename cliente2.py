@@ -12,6 +12,8 @@ try:
     # Establish connection to TCP server and exchange data
     tcp_client.connect((host_ip, server_port))
     print('Connection status: ready')
+    tcp_client.send('Established connection. Waiting for the message.'.encode())
+
     # Read data from the TCP server and close the connection
     received = tcp_client.recv(estandar)
 
