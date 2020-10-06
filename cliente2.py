@@ -22,5 +22,9 @@ try:
         f.write(received)
         received = tcp_client.recv(estandar)
     f.close()
+
+    print('Termino')
+    tcp_client.send("File received".encode())
+
 finally:
     tcp_client.close()
